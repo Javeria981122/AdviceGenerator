@@ -1,0 +1,126 @@
+:root{
+   /* Colors
+
+   Primary*/ 
+   
+   
+   --Light-cyan: hsl(193, 38%, 86%);
+   --Neon-green: hsl(150, 100%, 66%);
+
+   /*Neutral*/ 
+   --Grayish-blue: hsl(217, 19%, 38%);
+    --Dark-grayish-blue: hsl(217, 19%, 24%);
+      --Dark-blue: hsl(218, 23%, 16%);
+
+}
+
+/*  First of all we need to add default 
+margin and padding because certain element 
+have margin and padding of their own and they 
+start behaving in unexpected ways adding default 
+values using *{-----}   */
+*{
+  margin: 0%;
+  padding: 0%;
+  /* box-sizing just tells the browser that
+   we are going to be using the css box model*/
+box-sizing: border-box;
+
+}
+
+
+.container h1{
+    color: var(--Neon-green);
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.container p{
+    margin-bottom: 2rem;
+    color: var(--Light-cyan);
+}
+
+.container picture{
+    margin-bottom: 3rem ;
+    
+}
+
+p{
+    font-size: 28px;
+    line-height: height 1.5rem; ;
+}
+
+
+img{
+max-width: 100%;
+
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    background-color: var(--Dark-blue);
+    padding: 1.25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     /* doing this to calculate height using a mobile 
+     so i used calc function*/
+    height: calc(100vh - 0.1px);
+}
+.container{
+    background-color: var(--Dark-grayish-blue);
+    padding: 1.25rem 1.25rem 2rem;
+    border-radius: 15px;
+    
+}
+
+.container button{
+    background-color: var(--Neon-green);
+    border:none;
+    border-radius: 50%;
+    padding: 1rem;
+    
+    cursor: pointer;
+    margin-top: 0.25rem;
+
+    /* An element with position: absolute; is positioned 
+    relative to the nearest positioned ancestor 
+    (instead of positioned relative to the viewport, like fixed).*/
+    position:absolute;
+    left:50%;
+  transform: translateX(-50%);
+}
+
+.container button:hover{
+   
+  box-shadow: 0 5px 30px hsl(150, 100%, 66%);
+}
+
+
+   .attribution { font-size: 11px; 
+        text-align: center;
+        margin-top: 4rem;
+        color: var(--Light-cyan);
+    }
+    .attribution a { color: hsl(228, 45%, 44%);
+    transition: color 0.3s ease-in-out;
+    }
+  
+    .attribution :hover{
+        color: hsl(228, 81%, 50%) ;
+    }
+
+
+    /* Increases responsiveness */
+    @media(min-width:500px){
+        .container{
+            max-width: 480px;
+        }
+    }
+   
